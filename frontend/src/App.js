@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
@@ -57,17 +58,46 @@ function App() {
     return <div>{error}</div>;
   }
 
+=======
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [text, setText] = useState(''); // State to manage the textarea content
+  const [isDetected, setIsDetected] = useState(false); // State to track detection
+  const [isVisible, setIsVisible] = useState(false);  // State to toggle the new button
+
+  const handleDetect = () => {
+    setIsDetected(true);  // Show "Detected" message
+    setIsVisible(true);   // Show the "True" button
+  };
+
+  const handleClear = () => {
+    setText('');          // Clear the textarea content
+    setIsDetected(false); // Reset "Detected" message
+    setIsVisible(false);  // Hide the "True" button
+  };
+
+>>>>>>> f03a7b484d2e65155564bac7cade53ebbcc6b96a
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-200 to-blue-100 p-5">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
         <h1 className="text-3xl font-bold text-center text-customBlue mb-4">
+<<<<<<< HEAD
           Evaluate AI to{" "}
+=======
+          Evaluate AI to{' '}
+>>>>>>> f03a7b484d2e65155564bac7cade53ebbcc6b96a
           <span className="text-customPurple">News Authentication</span>
         </h1>
         <textarea
           className="w-full h-40 border border-gray-300 rounded-md p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent"
           placeholder="Type or Paste"
+<<<<<<< HEAD
           value={text} // Bind value to the `text` state
+=======
+          value={text}            // Bind value to the `text` state
+>>>>>>> f03a7b484d2e65155564bac7cade53ebbcc6b96a
           onChange={(e) => setText(e.target.value)} // Update the state on change
         />
         <div className="flex justify-center mt-4 gap-4">
@@ -98,6 +128,7 @@ function App() {
             </button>
           </div>
         )}
+<<<<<<< HEAD
 
         {/* Display the fetched data from the backend */}
         <div className="mt-6">
@@ -122,6 +153,8 @@ function App() {
             <p className="text-center">{postResponse}</p>
           </div>
         )}
+=======
+>>>>>>> f03a7b484d2e65155564bac7cade53ebbcc6b96a
       </div>
     </div>
   );
